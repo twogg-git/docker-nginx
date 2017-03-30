@@ -1,5 +1,4 @@
 ![deploying-local-docker](docker.png)
-
 ## Expose a container, build and run an image on locally
 
 ### Building an image

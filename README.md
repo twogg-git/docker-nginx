@@ -1,6 +1,6 @@
-!(docker.png)
+![deploying-microservices](docker.png)
 
-# Expose cointainer, build and run image on locally
+# Expose container, build and run image on locally
 
 ## Building an image
 We are going to use a super small Linux distribution called Alpine Linux with an Nginx HTTP server.Please check file  "Dockerfile" that is inside this folder

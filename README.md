@@ -67,11 +67,6 @@ Removing a container (has to be stopped)
 $ docker rm <container name>
 ```
 
-Removing all containers with exited status
-```sh
-$ docker rm -v $(docker ps -a -q -f status=exited)
-```
-
 Inspecting a container
 ```sh
 $ docker inspect <container name>

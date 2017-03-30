@@ -1,4 +1,4 @@
-![deploying-microservices](docker.png)
+![deploying-local-docker](docker.png)
 
 # Expose container, build and run image on locally
 

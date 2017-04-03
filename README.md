@@ -67,6 +67,11 @@ Removing a container (has to be stopped)
 $ docker rm <container name>
 ```
 
+Removing a container (has to be stopped)
+```sh
+$ docker rm $(docker ps -a -q)
+```
+
 Inspecting a container
 ```sh
 $ docker inspect <container name>
@@ -85,6 +90,11 @@ $ docker pull <image>
 Removing docker images
 ```sh
 $ docker rmi <image name>
+```
+
+Removing ALL docker images
+```sh
+$ docker rmi -f $(docker images -q)
 ```
 
 Go to interactive mode in a container

@@ -1,5 +1,5 @@
 ![deploying-local-docker](docker.png)
-## Expose a container, build and run an image on locally
+## Expose a container, build and run an image locally
 
 ### Building an image
 We are going to use a super small Linux distribution called Alpine Linux with an Nginx HTTP server. 

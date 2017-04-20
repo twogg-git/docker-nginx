@@ -13,7 +13,7 @@ Line 2 used `COPY` directive to copy the contents of the `./site` folder to `/us
 In order to run this image, we first build it :
 
 ```sh
-$ docker build -t microservice .
+$ docker build -t my-nginx .
 ```
 
 Building an image, executes every statement inside of the `Dockerfile` and overlays the resulting file system on top of the previous one.
@@ -21,7 +21,13 @@ Building an image, executes every statement inside of the `Dockerfile` and overl
 We are going to use `-d` flag to run our docker as "daemonized" container "Run in background". And `-p 3001:80` flag to maps the port 3001 on the host machine to the port 80 inside the container.
 
 ```sh
-$ docker run -d -p 3000:80 microservice
+$ docker run -d -p 3000:80 my-nginx
+```
+
+We can test our docker container running on:
+
+```sh
+http://localhost:3000
 ```
 
 ### Useful Docker Commands 

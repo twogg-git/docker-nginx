@@ -18,16 +18,30 @@ $ docker build -t my-nginx .
 
 Building an image, executes every statement inside of the `Dockerfile` and overlays the resulting file system on top of the previous one.
 
-We are going to use `-d` flag to run our docker as "daemonized" container "Run in background". And `-p 3001:80` flag to maps the port 3001 on the host machine to the port 80 inside the container.
+We are going to use `-p 3001:80` flag to maps the port 3001 on the host machine to the port 80 inside the container.
 
 ```sh
-$ docker run -d -p 3000:80 my-nginx
+$ docker run -p 3000:80 my-nginx
 ```
 
 We can test our docker container running on:
 
 ```sh
 http://localhost:3000
+```
+
+Next step is working with a *volumne*. We are going to use the html file located inside site-volume folder, so each time we run our docker container it will refresh the changes in our page. (Don't forget to change the folder's path).
+
+```sh
+docker run -p 3000:80 -v /__YOUR-FOLDER-PATH__/local-docker/site-volume:/usr/share/nginx/html my-nginx 
+```
+
+Now chage the content of site-volume/index.html file and run again the previous command, the changes will loaded by the docker container.
+
+Finally we are going to use `-d` flag to run our docker as "daemonized" container "Run in background".
+
+```sh
+$ docker run -d -p 3000:80 my-nginx
 ```
 
 ### Useful Docker Commands 

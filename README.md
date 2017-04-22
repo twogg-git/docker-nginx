@@ -10,7 +10,7 @@ Line 2 used `COPY` directive to copy the contents of the `./site` folder to `/us
 
 ### Running an image
 
-In order to run this image, we first build it :
+In order to run this image, go to the folder with the Dockerfile then build it:
 
 ```sh
 $ docker build -t my-nginx .

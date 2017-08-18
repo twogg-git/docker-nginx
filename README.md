@@ -1,5 +1,5 @@
-![deploying-local-docker](docker.png)
-## Expose a container, build and run an image locally
+![deploying-docker-nginx](docker.png)
+## Expose a NGinx docker image, build and run locally
 
 ### Building an image
 We are going to use a super small Linux distribution called Alpine Linux with an Nginx HTTP server. 
@@ -10,13 +10,17 @@ Line 2 used `COPY` directive to copy the contents of the `./site` folder to `/us
 
 ### Running an image
 
-In order to run this image, go to the folder with the Dockerfile then build it:
+In order to run this image, go to the folder with the Dockerfile then build it. We are going to use -t flag to asing the name of the image. Building an image, executes every statement inside of the `Dockerfile` and overlays the resulting file system on top of the previous one.
 
 ```sh
-$ docker build -t my-nginx .
+$ docker build -t localnginx .
 ```
 
-Building an image, executes every statement inside of the `Dockerfile` and overlays the resulting file system on top of the previous one.
+
+```sh
+$ docker images ls
+```
+
 
 We are going to use `-p 3001:80` flag to maps the port 3001 on the host machine to the port 80 inside the container.
 

@@ -103,6 +103,6 @@ $ docker rmi -f $(docker images -q)
 
 ### Docker links
 
-[Docker Commands](https://docs.docker.com/edge/engine/reference/commandline/docker/)
-[Test Docker Online](http://labs.play-with-docker.com/) 
-[Docker Classroom](http://training.play-with-docker.com/)
+ *[Docker Commands](https://docs.docker.com/edge/engine/reference/commandline/docker/)
+ *[Test Docker Online](http://labs.play-with-docker.com/) 
+ *[Docker Classroom](http://training.play-with-docker.com/)

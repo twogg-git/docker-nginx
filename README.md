@@ -81,23 +81,13 @@ $ docker inspect localnginx
 
 ### Working inside a container
 
+Now we are going to access our container bash console, we are going to use an Ubuntu image to get the libraries necesaries to perform some simple commands inside our container. The `--rm flag` will remove our container once we stop or exit the console. We are goint to use too `exec /bin/bash` what allows us to run commands on a running container.  
+
 ```sh
 $ docker run --name ubuntubash --rm -i -t ubuntu:rolling bash
-```
-
-```sh
 $ docker run --name ubuntubash -i -t -d ubuntu:rolling 
-```
-
-```sh
 $ docker exec -it ubuntubash /bin/bash
-```
-
-```sh
 $ docker attach ubuntubash 
-```
-
-```sh
 $ docker start ubuntubash
 ```
 
@@ -114,7 +104,5 @@ $ docker rmi -f $(docker images -q)
 ### Docker links
 
 [Docker Commands](https://docs.docker.com/edge/engine/reference/commandline/docker/)
-
 [Test Docker Online](http://labs.play-with-docker.com/) 
-
 [Docker Classroom](http://training.play-with-docker.com/)
